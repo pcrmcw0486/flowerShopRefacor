@@ -127,12 +127,11 @@
 										}
 
 									}
-									System.out.println(check);
 									if (check == false) {
 								%>
 								<li class="nav-item"><a class="nav-link"
-									href="<%=request.getContextPath()%>/login.jsp">로그인</a></li>
-								<li><a href="<%=request.getContextPath() %>/signup.jsp" class="btn btn-outline-light top-btn"><span
+									href="<%=request.getContextPath()%>/login">로그인</a></li>
+								<li><a href="<%=request.getContextPath() %>/WEB-INF/jsp/signup.jsp" class="btn btn-outline-light top-btn"><span
 										class="ti-plus"></span> 회원가입</a></li>
 								<%
 									} else {

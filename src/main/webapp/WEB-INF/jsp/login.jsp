@@ -1,3 +1,4 @@
+<%@page import="java.util.Enumeration"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -30,18 +31,37 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
+	<%
+		Enumeration en = session.getAttributeNames();
+	int i =0 ;
+	int valid = 123;
+	while(en.hasMoreElements()){
+		i++;
+		String name = en.nextElement().toString();
+		if(name.equals("status")){
+			valid = (Integer)session.getAttribute(name);
+			break;
+		}
+	}
+		if(valid == 405) {
+	%>
+	<script>
+		alert("로그인 실패");
+	</script>
+	<%
+		}
+		session.setAttribute("status",123);
+	%>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<a href="index.jsp"><img src="resources/images/img-01.png"
-                                             alt="IMG"></a>
+					<a href="/"><img src="resources/images/img-01.png" alt="IMG"></a>
 				</div>
 
-				<form class="login100-form validate-form" action="signup.action"
+				<form class="login100-form validate-form" action="login"
 					method="post">
-					<span class="login100-form-title"> Member SignUp </span>
+					<span class="login100-form-title"> Member Login </span>
 
 					<div class="wrap-input100">
 						<input class="input100" type="text" name="ID" placeholder="Id">
@@ -50,33 +70,29 @@
 						</span>
 					</div>
 
-					
-					<div class="wrap-input100" data-validate="Password is required">
+					<div class="wrap-input100 validate-input"
+						data-validate="Password is required">
 						<input class="input100" type="password" name="PW"
 							placeholder="Password"> <span class="focus-input100"></span>
 						<span class="symbol-input100"> <i class="fa fa-lock"
 							aria-hidden="true"></i>
 						</span>
 					</div>
-					<div class="wrap-input100" data-validate="Password is required">
-						<input class="input100" type="text" name="Name"
-							placeholder="Name"> <span class="focus-input100"></span>
-						<span class="symbol-input100"> <i class="fa fa-user-circle fa-spin"
-							aria-hidden="true"></i>
-						</span>
-					</div>
-					<div class="wrap-input100" data-validate="Password is required">
-						<input class="input100" type="test" name="phoneNumber"
-							placeholder="PhoneNumber"> <span class="focus-input100"></span>
-						<span class="symbol-input100"> <i class="fa fa-mobile fa-spin"
-							aria-hidden="true"></i>
-						</span>
-					</div>
-						
+
 					<div class="">
-						<button type="submit" class="login100-form-btn">SignUp</button>
+						<button type="submit" class="login100-form-btn">Login</button>
 					</div>
 
+					<div class="text-center p-t-12">
+						<span class="txt1"> Forgot </span> <a class="txt2" href="#">
+							Username / Password? </a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="signup"> Create your Account <i
+							class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
 				</form>
 			</div>
 		</div>

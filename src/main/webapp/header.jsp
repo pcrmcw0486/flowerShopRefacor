@@ -65,7 +65,7 @@
 				<div class="col-md-12">
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<a class="navbar-brand"
-							href="<%=request.getContextPath()%>/index.jsp">TenTen</a>
+							href="/">TenTen</a>
 						<button class="navbar-toggler" type="button"
 							data-toggle="collapse" data-target="#navbarNavDropdown"
 							aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -80,6 +80,7 @@
 									aria-haspopup="true" aria-expanded="false"> 꽃 검색하기 <span
 										class="icon-arrow-down"></span>
 								</a>
+
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
 										<a class="dropdown-item"
@@ -113,6 +114,9 @@
 											테스트</a>
 									</div></li>
 								<%
+									System.out.println("header : " + request.getContextPath());
+								%>
+								<%
 									boolean check = false;
 									Enumeration<String> en = session.getAttributeNames();
 									int j = 0;
@@ -130,7 +134,7 @@
 								%>
 								<li class="nav-item"><a class="nav-link"
 									href="<%=request.getContextPath()%>/login.jsp">로그인</a></li>
-								<li><a href="<%=request.getContextPath()%>/signup.jsp" class="btn btn-outline-light top-btn"><span
+								<li><a href="<%=request.getContextPath()%>/WEB-INF/jsp/signup.jsp" class="btn btn-outline-light top-btn"><span
 										class="ti-plus"></span> 회원가입</a></li>
 								<%
 									} else {

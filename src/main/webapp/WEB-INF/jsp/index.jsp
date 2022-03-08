@@ -67,7 +67,7 @@
 				<div class="col-md-12">
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<a class="navbar-brand"
-							href="<%=request.getContextPath()%>/index.jsp">TenTen</a>
+							href="<%=request.getContextPath()%>/">TenTen</a>
 						<button class="navbar-toggler" type="button"
 							data-toggle="collapse" data-target="#navbarNavDropdown"
 							aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -131,8 +131,8 @@
 									if (check == false) {
 								%>
 								<li class="nav-item"><a class="nav-link"
-									href="<%=request.getContextPath()%>/login.jsp">로그인</a></li>
-								<li><a href="<%=request.getContextPath() %>/signup.jsp" class="btn btn-outline-light top-btn"><span
+									href="<%=request.getContextPath()%>/login">로그인</a></li>
+								<li><a href="<%=request.getContextPath() %>/signup" class="btn btn-outline-light top-btn"><span
 										class="ti-plus"></span> 회원가입</a></li>
 								<%
 									} else {

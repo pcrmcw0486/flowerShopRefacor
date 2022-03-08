@@ -56,10 +56,10 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<a href="index.jsp"><img src="resources/images/img-01.png" alt="IMG"></a>
+					<a href="/"><img src="resources/images/img-01.png" alt="IMG"></a>
 				</div>
 
-				<form class="login100-form validate-form" action="login.action"
+				<form class="login100-form validate-form" action="login"
 					method="post">
 					<span class="login100-form-title"> Member Login </span>
 
@@ -89,7 +89,7 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="signup.jsp"> Create your Account <i
+						<a class="txt2" href="WEB-INF/jsp/signup.jsp"> Create your Account <i
 							class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
