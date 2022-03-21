@@ -46,6 +46,30 @@
     <!-- Swipper Slider JS -->
     <script src="../resources/js/swiper.min.js"></script>        
 </head>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
+<!-- Google Fonts -->
+<link
+		href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900"
+		rel="stylesheet">
+<!-- Simple line Icon -->
+<link rel="stylesheet" href="../resources/css/simple-line-icons.css">
+<!-- Themify Icon -->
+<link rel="stylesheet" href="../resources/css/themify-icons.css">
+<!-- Hover Effects -->
+<link rel="stylesheet"
+	  href="../resources/css/set1.css">
+<!-- Main CSS -->
+<link rel="stylesheet"
+	  href="../resources/css/style.css">
+<!-- jQuery, Bootstrap JS. -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+		src="../resources/js/jquery-3.2.1.min.js"></script>
+<script src="../resources/js/popper.min.js"></script>
+<script
+		src="../resources/js/bootstrap.min.js"></script>
+
 
 <body>
     <!--============================= HEADER =============================-->
@@ -54,7 +78,7 @@
  
     <!--============================= BOOKING DETAILS =============================-->
     <section class="light-bg booking-details_wrap">
-        <form action="recommend.jsp" method="GET">
+        <form action="recommend" method="GET">
         <div class="container">
 	          <div id="1" style="text-align:center;" >
 	          <h2>어떤 꽃을</h2>
@@ -122,59 +146,42 @@
     
     <!--//END BOOKING DETAILS -->
     <!--============================= FOOTER =============================-->
-    <footer class="main-block dark-bg">
-        <div class="container-a">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="copyright">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright &copy; 2018 Listing. All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <ul>
-                            <li><a href="#"><span class="ti-facebook"></span></a></li>
-                            <li><a href="#"><span class="ti-twitter-alt"></span></a></li>
-                            <li><a href="#"><span class="ti-instagram"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-    <script>
-        if ($('.image-link').length) {
-            $('.image-link').magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        }
-        if ($('.image-link2').length) {
-            $('.image-link2').magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true
-                }
-            });
-        }
-    </script>
+
+<%--    <script>--%>
+<%--        var swiper = new Swiper('.swiper-container', {--%>
+<%--            slidesPerView: 3,--%>
+<%--            slidesPerGroup: 3,--%>
+<%--            loop: true,--%>
+<%--            loopFillGroupWithBlank: true,--%>
+<%--            pagination: {--%>
+<%--                el: '.swiper-pagination',--%>
+<%--                clickable: true,--%>
+<%--            },--%>
+<%--            navigation: {--%>
+<%--                nextEl: '.swiper-button-next',--%>
+<%--                prevEl: '.swiper-button-prev',--%>
+<%--            },--%>
+<%--        });--%>
+<%--    </script>--%>
+<%--    <script>--%>
+<%--        if ($('.image-link').length) {--%>
+<%--            $('.image-link').magnificPopup({--%>
+<%--                type: 'image',--%>
+<%--                gallery: {--%>
+<%--                    enabled: true--%>
+<%--                }--%>
+<%--            });--%>
+<%--        }--%>
+<%--        if ($('.image-link2').length) {--%>
+<%--            $('.image-link2').magnificPopup({--%>
+<%--                type: 'image',--%>
+<%--                gallery: {--%>
+<%--                    enabled: true--%>
+<%--                }--%>
+<%--            });--%>
+<%--        }--%>
+<%--    </script>--%>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>

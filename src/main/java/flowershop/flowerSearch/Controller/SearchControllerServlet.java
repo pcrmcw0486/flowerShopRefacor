@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name="searchControllerJSP", urlPatterns = "*.do")
-public final class SearchController extends HttpServlet {
+public final class SearchControllerServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) 

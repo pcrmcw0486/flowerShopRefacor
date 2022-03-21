@@ -15,25 +15,25 @@
 <meta name="keywords" content="#">
 <!-- Favicons -->
 <link rel="shortcut icon" href="#">
-<!-- Page Title -->
+<%--<!-- Page Title -->--%>
 <title>Flower Search &amp; Directory Website Template</title>
-<!-- Bootstrap CSS -->
+<%--<!-- Bootstrap CSS -->--%>
 <link rel="stylesheet"
 	href="../resources/css/bootstrap.min.css">
-<!-- Google Fonts -->
+<%--<!-- Google Fonts -->--%>
 <link
 	href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900"
 	rel="stylesheet">
-<!-- Simple line Icon -->
+<%--<!-- Simple line Icon -->--%>
 <link rel="stylesheet"
 	href="../resources/css/simple-line-icons.css">
-<!-- Themify Icon -->
+<%--<!-- Themify Icon -->--%>
 <link rel="stylesheet"
 	href="../resources/css/themify-icons.css">
-<!-- Hover Effects -->
+<%--<!-- Hover Effects -->--%>
 <link rel="stylesheet"
 	href="../resources/css/set1.css">
-<!-- Main CSS -->
+<%--<!-- Main CSS -->--%>
 <link rel="stylesheet"
 	href="../resources/css/style.css">
 
@@ -97,7 +97,7 @@
 							</div>
 						</div>
 					</form>-->
-					<form action="SearchByFlang.do" name="options" method="post">
+					<form action="SearchByFlang" name="options" method="post">
 
 						<div class="col-md-12 responsive-wrap">
 							<!-- 검색 버튼  -->
@@ -119,7 +119,7 @@
 						</div>
 					</form>
 					<!--============================= 키워드 버튼 =============================-->
-					<form action="SearchByKeyword.do" method="post">
+					<form action="SearchByKeyword" method="post">
 						<div class="mb-4 pb-2 ">
 							<div class="container-fluid col-md-6">
 								<div class="btn-group" data-toggle="buttons">

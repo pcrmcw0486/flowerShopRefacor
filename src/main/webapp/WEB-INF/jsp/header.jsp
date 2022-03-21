@@ -15,31 +15,29 @@
 <!-- Page Title -->
 <title>TenTen : Find your flower</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="./resources/css/bootstrap.min.css">
 <!-- Google Fonts -->
 <link
 	href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900"
 	rel="stylesheet">
 <!-- Simple line Icon -->
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/simple-line-icons.css">
+<link rel="stylesheet" href="./resources/css/simple-line-icons.css">
 <!-- Themify Icon -->
-<link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/themify-icons.css">
+<link rel="stylesheet" href="./resources/css/themify-icons.css">
 <!-- Hover Effects -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/set1.css">
+	href="./resources/css/set1.css">
 <!-- Main CSS -->
 <link rel="stylesheet"
-	href="<%=request.getContextPath()%>/resources/css/style.css">
+	href="./resources/css/style.css">
 <!-- jQuery, Bootstrap JS. -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script
-	src="<%=request.getContextPath()%>/resources/js/jquery-3.2.1.min.js"></script>
-<script src="<%=request.getContextPath()%>/resources/js/popper.min.js"></script>
+	src="./resources/js/jquery-3.2.1.min.js"></script>
+<script src="./resources/js/popper.min.js"></script>
 <script
-	src="<%=request.getContextPath()%>/resources/js/bootstrap.min.js"></script>
+	src="./resources/js/bootstrap.min.js"></script>
+
 
 <script>
 	$(window).scroll(function() {
@@ -56,6 +54,7 @@
 		}
 	});
 </script>
+
 </head>
 <body>
 
@@ -80,13 +79,12 @@
 									aria-haspopup="true" aria-expanded="false"> 꽃 검색하기 <span
 										class="icon-arrow-down"></span>
 								</a>
-
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
 										<a class="dropdown-item"
 											href="<%=request.getContextPath()%>/Search/search_flang">꽃말</a>
 										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/Search/search_flower.jsp">꽃
+											href="<%=request.getContextPath()%>/Search/search_flower">꽃
 											이름</a>
 									</div></li>
 								<li class="nav-item dropdown"><a class="nav-link" href="#"
@@ -97,25 +95,9 @@
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
 										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/flower/choice.jsp">이런
+											href="<%=request.getContextPath()%>/posts/choice">이런
 											상황? 어떤 꽃?</a>
 									</div></li>
-								<li class="nav-item dropdown"><a class="nav-link" href="#"
-									id="navbarDropdownMenuLink2" data-toggle="dropdown"
-									aria-haspopup="true" aria-expanded="false"> Entertainments
-										<span class="icon-arrow-down"></span>
-								</a>
-									<div class="dropdown-menu"
-										aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/game/game.jsp">미니게임</a> <a
-											class="dropdown-item"
-											href="<%=request.getContextPath()%>/mindTest/mindTest.jsp">심리
-											테스트</a>
-									</div></li>
-								<%
-									System.out.println("header : " + request.getContextPath());
-								%>
 								<%
 									boolean check = false;
 									Enumeration<String> en = session.getAttributeNames();
@@ -133,15 +115,15 @@
 									if (check == false) {
 								%>
 								<li class="nav-item"><a class="nav-link"
-									href="<%=request.getContextPath()%>/login.jsp">로그인</a></li>
-								<li><a href="<%=request.getContextPath()%>/WEB-INF/jsp/signup.jsp" class="btn btn-outline-light top-btn"><span
+									href="<%=request.getContextPath()%>/login">로그인</a></li>
+								<li><a href="<%=request.getContextPath()%>/signup" class="btn btn-outline-light top-btn"><span
 										class="ti-plus"></span> 회원가입</a></li>
 								<%
 									} else {
 										String usr_name = (String)session.getAttribute("USER_NAME");
 								%>
 								<li class="nav-item dropdown"> <%=usr_name%>환영합니다. </li>
-								<li><a href="<%=request.getContextPath() %>/logout.jsp"
+								<li><a href="/logout.jsp"
 									class="btn btn-outline-light top-btn"><span class="ti-plus"></span>
 										로그아웃</a></li>
 								<%

@@ -85,9 +85,9 @@
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
 										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/Search/search_flang.jsp">꽃말</a>
+											href="<%=request.getContextPath()%>/Search/search_flang">꽃말</a>
 										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/Search/search_flower.jsp">꽃
+											href="<%=request.getContextPath()%>/Search/search_flower">꽃
 											이름</a>
 									</div></li>
 								<li class="nav-item dropdown"><a class="nav-link" href="#"
@@ -98,21 +98,8 @@
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
 										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/flower/choice.jsp">이런
+											href="<%=request.getContextPath()%>/posts/choice">이런
 											상황? 어떤 꽃?</a>
-									</div></li>
-								<li class="nav-item dropdown"><a class="nav-link" href="#"
-									id="navbarDropdownMenuLink2" data-toggle="dropdown"
-									aria-haspopup="true" aria-expanded="false"> Entertainments
-										<span class="icon-arrow-down"></span>
-								</a>
-									<div class="dropdown-menu"
-										aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item"
-											href="<%=request.getContextPath()%>/game/game.jsp">미니게임</a> <a
-											class="dropdown-item"
-											href="<%=request.getContextPath()%>/mindTest/mindTest.jsp">심리
-											테스트</a>
 									</div></li>
 								<%
 									boolean check = false;
@@ -169,14 +156,14 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div >
-                                <form class="form-wrap" action="SearchByOptions.do" method="post">
+                                <form class="form-wrap" action="/Search/SearchByOptions" method="post">
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <input type="text" name="search_name" placeholder="꽃이나 꽃말을 검색해보세요!" class="btn-group1" style="width:500px; text-align: center" >
                                         <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>검색<i class="pe-7s-angle-right"></i></button>
                                     </div>
                                 </form>
                                 <div class="slider-link">
-                                    <a href="Search/search_flower.jsp">꽃 검색하기</a><span>or</span> <a href="Search/search_flang.jsp">꽃말 검색하기</a>
+                                    <a href="Search/search_flower">꽃 검색하기</a><span>or</span> <a href="Search/search_flang">꽃말 검색하기</a>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +191,7 @@
                             <div class="find-place-img_wrap">
                                 <div class="grid">
                                     <figure class="effect-ruby">
-                                        <a href = "Search/search_flang.jsp"><img class="s" src="resources/images/find-place2.jpg" class="img-fluid" alt="img13" />
+                                        <a href = "Search/search_flang"><img class="s" src="resources/images/find-place2.jpg" class="img-fluid" alt="img13" />
                                         <figcaption>
                                             <h5>꽃말로 찾기</h5>
                                             <p>>></p>

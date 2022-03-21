@@ -7,20 +7,8 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-	public static Connection getConnection() throws SQLException, ClassNotFoundException{
-		Connection conn = null;
-		//connection information
-		 
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-		String user = "webdb";
-		String password = "webdb";
-		
-	   
-
-		conn = DriverManager.getConnection(url, user , password);
-		
-		return conn;
+	public static Connection getConnection() throws SQLException, ClassNotFoundException {
+		return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/flowershop", "sa", "");
 	}
 
 }

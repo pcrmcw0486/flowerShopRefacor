@@ -17,19 +17,19 @@
 <!-- Page Title -->
 <title>Flower Search &amp; Directory Website Template</title>
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="../resources/css/bootstrap.min.css">
 <!-- Google Fonts -->
 <link
 	href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900"
 	rel="stylesheet">
 <!-- Simple line Icon -->
-<link rel="stylesheet" href="../../resources/css/simple-line-icons.css">
+<link rel="stylesheet" href="../resources/css/simple-line-icons.css">
 <!-- Themify Icon -->
-<link rel="stylesheet" href="../../resources/css/themify-icons.css">
+<link rel="stylesheet" href="../resources/css/themify-icons.css">
 <!-- Hover Effects -->
-<link rel="stylesheet" href="../../resources/css/set1.css">
+<link rel="stylesheet" href="../resources/css/set1.css">
 <!-- Main CSS -->
-<link rel="stylesheet" href="../../resources/css/style.css">
+<link rel="stylesheet" href="../resources/css/style.css">
  <style>
     		@font-face { font-family: 'RIDIBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
            
@@ -65,7 +65,7 @@
 		<div class="container-fluid card-header">
 
 			<!-- sql문 파라미터로 넘어갈 form 값들 -->
-			<form action="SearchByOptions.do" name="options" method="post">
+			<form action="SearchByOptions" name="options" method="post">
 
 				<div class="col-md-12 responsive-wrap">
 					<!-- 검색 버튼  -->
@@ -245,9 +245,9 @@
 
 	<!-- jQuery, Bootstrap JS. -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="../../resources/js/jquery-3.2.1.min.js"></script>
-	<script src="../../resources/js/popper.min.js"></script>
-	<script src="../../resources/js/bootstrap.min.js"></script>
+	<script src="../resources/js/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/popper.min.js"></script>
+	<script src="../resources/js/bootstrap.min.js"></script>
 
 
 </body>

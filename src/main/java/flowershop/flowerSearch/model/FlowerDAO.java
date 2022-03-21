@@ -1,5 +1,7 @@
 package flowershop.flowerSearch.model;
 
+import flowershop.flowerSearch.database.DBConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,10 +17,11 @@ public class FlowerDAO {
 	public static FlowerDAO getInstnace() {
 		return  instance;
 	}
-	
-	//�� �̸����� �˻�
+
+	//꽃 이름으로 검색
+	// 계절 색깔 선택해서 검색하는 부분 + 꽃 이름 typing
 	public ArrayList<FlowerDTO> serachByOptions(String req_name, String[] req_seasons, String[] req_colors){
-		/*Connection conn = null;
+		Connection conn = null;
 		PreparedStatement pstmt = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -27,8 +30,8 @@ public class FlowerDAO {
 		String sql = "";
 		String color_sql = "";
 		String season_sql = "";
-		
-		//�޾ƿ� �Ķ���� �� ��ó��
+
+		//받아온 파라미터 값 전처리
 		String search_name="";
 		if(req_name != null)
 			search_name=req_name;
@@ -61,7 +64,7 @@ public class FlowerDAO {
 				+"left join colors c on fd.flower_color = c.color_id left join flower f on fd.f_id = f.f_id "+
 				"left join season s on s.f_id = fd.f_id left join seasons ss on s.s_id = ss.s_id "+
 				"where f.fname like '%" + search_name + "%' " + season_sql + color_sql;
-		//sql�� ����
+		//sql문 생성
 		System.out.println(sql);
 		ArrayList<FlowerDTO> listOfFlowers = new ArrayList<FlowerDTO>();
 		System.out.println("----------------");
@@ -85,7 +88,7 @@ public class FlowerDAO {
 				System.out.println("Path:" + flower.getImage_Path());
 				
 				flower.setDescription(rs.getString("F_LANG"));
-				System.out.println("�ɸ�:" +flower.getDescription());
+				System.out.println("꽃말:" +flower.getDescription());
 				//flower.setColor(rs.getInt("FLOWER_COLOR"));
 				//System.out.println("color:" + flower.getColor());
 				
@@ -105,14 +108,14 @@ public class FlowerDAO {
 			}catch(Exception ex) {
 				throw new RuntimeException(ex.getMessage());
 			}
-
-		}*/
+		}
 		return null;
 	}
 	
-	//�ɸ��� �˻�
+	//꽃말로 검색
+	//직접 typing한거.
 	public ArrayList<FlowerDTO> serachByFlang(String req_flang){
-		/*Connection conn = null;
+		Connection conn = null;
 		PreparedStatement pstmt = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -124,11 +127,11 @@ public class FlowerDAO {
 			search_flang = req_flang;
 		System.out.println("input req flang : " + req_flang);
 		System.out.println("output search_lang : " + search_flang);
-		//sql�� �����ϰ�
+		//sql문 생성하고
 
 		sql = "select * from f_detail fd left join flower f on fd.f_id = f.f_id "+
 		" where fd.f_lang like '%"+ search_flang + "%'";
-		//���� �� qeury�� ����
+		//연결 및 query문 실행
 		System.out.println(sql);
 		try {
 			conn = DBConnection.getConnection();
@@ -143,7 +146,7 @@ public class FlowerDAO {
 				System.out.println("Path:" + flower.getImage_Path());
 
 				flower.setDescription(rs.getString("F_LANG"));
-				System.out.println("�ɸ�:" +flower.getDescription());
+				System.out.println("꽃말:" +flower.getDescription());
 
 				listOfFlowers.add(flower);
 			}
@@ -162,14 +165,15 @@ public class FlowerDAO {
 				throw new RuntimeException(ex.getMessage());
 			}
 
-		}*/
+		}
 		
 		return null;
 	}
 	
-	//���ǰ˻�
+	//조건 검색
+	//꽃말 keyword
 	public ArrayList<FlowerDTO> serachByKeyword(String[] req_keyword){
-		/*Connection conn = null;
+		Connection conn = null;
 		PreparedStatement pstmt = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -188,11 +192,9 @@ public class FlowerDAO {
 			sub_sql += ")";
 		}
 
-		//sql�� �����ϰ�
 		sql = "select distinct * from f_detail fd left join flower f on fd.f_id = f.f_id,"+
 		      " categorized ct where f.f_id = ct.f_id" + sub_sql;
 		System.out.println(sql);
-		//���� �� qeury�� ����
 		try {
 			conn = DBConnection.getConnection();
 			stmt = conn.createStatement();
@@ -206,7 +208,7 @@ public class FlowerDAO {
 				System.out.println("Path:" + flower.getImage_Path());
 
 				flower.setDescription(rs.getString("F_LANG"));
-				System.out.println("�ɸ�:" +flower.getDescription());
+				System.out.println("꽃말:" +flower.getDescription());
 				listOfFlowers.add(flower);
 			}
 			return listOfFlowers;
@@ -225,12 +227,6 @@ public class FlowerDAO {
 			}
 
 		}
-		*/
 		return null;
 	}
-	
-	
-	
-	
-	
 }
