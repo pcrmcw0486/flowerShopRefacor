@@ -1,6 +1,5 @@
 package flowershop.flowerSearch.domain;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,11 +11,9 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @Setter
-public class Flower {
-    @Id
-    @GeneratedValue
-    @Column(name="flower_id")
+public class Season {
+    @Id @GeneratedValue
+    @Column(name="season_id")
     private Long id;
-    private Long birthMonth;
-    private String flowerName;
+    private String season;
 }
