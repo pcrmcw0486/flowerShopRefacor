@@ -11,8 +11,7 @@ import javax.persistence.EntityManager;
 public class FlowerRepository {
     private final EntityManager em;
 
-    public Flower save(Flower flower) {
+    public void save(Flower flower) {
         em.persist(flower);
-        return flower;
     }
 }

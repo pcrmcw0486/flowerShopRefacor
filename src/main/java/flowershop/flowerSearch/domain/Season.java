@@ -1,19 +1,17 @@
 package flowershop.flowerSearch.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import javax.swing.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public enum Season {
+    Spring("봄"),
+    Summer("여름"),
+    Fall("가을"),
+    Winter("겨울");
 
-@Entity
-@Getter
-@Setter
-public class Season {
-    @Id @GeneratedValue
-    @Column(name="season_id")
-    private Long id;
-    private String season;
+
+    private String koSeason;
+
+    Season(String koSeason) {
+        this.koSeason = koSeason;
+    }
 }
